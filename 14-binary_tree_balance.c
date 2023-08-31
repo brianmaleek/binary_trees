@@ -14,11 +14,11 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	// Get height of the left and right subtrees
+	/* Get height of the left and right subtrees */
 	left_h = binary_tree_height(tree->left);
 	right_h = binary_tree_height(tree->right);
 
-	// Return the greater height, plus 1 for the current node
+	/* Return the greater height, plus 1 for the current node */
 	return ((left_h > right_h ? left_h : right_h) + 1);
 }
 
@@ -36,10 +36,10 @@ int binary_tree_balance(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	// Get height  the left and right subtrees
-	left_h= binary_tree_height(tree->left);
+	/* Get height  the left and right subtrees */
+	left_h = binary_tree_height(tree->left);
 	right_h = binary_tree_height(tree->right);
 
-	// Return the difference in height- balance factor
+	/* Return the difference in height- balance factor */
 	return (left_h - right_h);
 }

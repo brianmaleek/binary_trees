@@ -12,11 +12,11 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	// check if the node has no children
+	/* check if the node has no children */
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 
-	// check if the node has two children
+	/* check if the node has two children */
 	if (tree->left != NULL && tree->right != NULL)
 		return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
 

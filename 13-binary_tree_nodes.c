@@ -13,10 +13,10 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	// If the node has no children, it is not a node
+	/* If the node has no children, it is not a node */
 	if (tree->left == NULL && tree->right == NULL)
 		return (0);
 
-	// Recursively count the nodes with at least 1 child
+	/* Recursively count the nodes with at least 1 child */
 	return (binary_tree_nodes(tree->left) + 1 + binary_tree_nodes(tree->right));
 }

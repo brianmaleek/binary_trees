@@ -12,10 +12,10 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	// If the node has no children, it is a leaf
+	/* If the node has no children, it is a leaf */
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 
-	// Recursively count the leaves
+	/* Recursively count the leaves */
 	return (binary_tree_leaves(tree->left) + binary_tree_leaves(tree->right));
 }
