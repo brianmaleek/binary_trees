@@ -10,12 +10,13 @@
 
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
+	binary_tree_t *parent = node->parent;
+	binary_tree_t *grandparent = parent->parent;
 	/* If node is NULL or the parent is NULL, return NULL */
 	if (node == NULL || node->parent == NULL)
 		return (NULL);
 
-	binary_tree_t *parent = node->parent;
-	binary_tree_t *grandparent = parent->parent;
+	
 
 	/* If the grandparent is NULL, there is no uncle */
 	if (grandparent == NULL)
